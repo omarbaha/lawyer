@@ -1,0 +1,108 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{task}-{####}",
+ "creation": "2022-02-14 11:34:43.276952",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "customer",
+  "lawyer",
+  "lawyer_name",
+  "task",
+  "date",
+  "end_date",
+  "case",
+  "location",
+  "appointment_id",
+  "appointment_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "lawyer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Lawyer",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "task",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Task",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "case",
+   "fieldtype": "Link",
+   "label": "Case",
+   "options": "Case"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "label": "Location"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Data",
+   "label": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "appointment_details",
+   "fieldtype": "Text",
+   "label": "Appointment details"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Datetime",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "appointment_id",
+   "fieldtype": "Link",
+   "label": "Appointment ID",
+   "options": "Appointments"
+  },
+  {
+   "fetch_from": "lawyer.employee_name",
+   "fieldname": "lawyer_name",
+   "fieldtype": "Data",
+   "label": "Lawyer Name"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-03-09 16:14:48.880194",
+ "modified_by": "Administrator",
+ "module": "Lawyer",
+ "name": "LawyerTasks",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

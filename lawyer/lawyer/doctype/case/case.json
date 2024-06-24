@@ -1,0 +1,244 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{equivalent_number}-{####}",
+ "creation": "2022-02-13 11:13:46.070235",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "customer",
+  "equivalent_number",
+  "case_type",
+  "case_degree",
+  "column_break_2",
+  "case_topic",
+  "study_potential_cases",
+  "section_break_5",
+  "pretender",
+  "column_break_6",
+  "respondent",
+  "section_break_12",
+  "to",
+  "file_name",
+  "start_service",
+  "service_suspension",
+  "billed_service",
+  "column_break_14",
+  "department_name",
+  "archive_number",
+  "end_of_service",
+  "city",
+  "section_break_23",
+  "meetings",
+  "attachements",
+  "lawyers_section",
+  "employee",
+  "tasks"
+ ],
+ "fields": [
+  {
+   "fetch_from": "study_potential_cases.pretender.pretender",
+   "fieldname": "pretender",
+   "fieldtype": "Table",
+   "label": "Pretender",
+   "options": "Pretender Table",
+   "reqd": 1
+  },
+  {
+   "fieldname": "respondent",
+   "fieldtype": "Table",
+   "label": "Respondent",
+   "options": "Opponent Table",
+   "reqd": 1
+  },
+  {
+   "fieldname": "to",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "To",
+   "options": "Case to",
+   "reqd": 1
+  },
+  {
+   "fieldname": "department_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Department name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "file_name",
+   "fieldtype": "Data",
+   "label": "File name"
+  },
+  {
+   "fieldname": "archive_number",
+   "fieldtype": "Data",
+   "label": "archive number"
+  },
+  {
+   "fieldname": "start_service",
+   "fieldtype": "Date",
+   "label": "start service",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_of_service",
+   "fieldtype": "Date",
+   "label": "End of service"
+  },
+  {
+   "fieldname": "service_suspension",
+   "fieldtype": "Date",
+   "label": "service suspension"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City",
+   "reqd": 1
+  },
+  {
+   "fieldname": "equivalent_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Case Number",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "billed_service",
+   "fieldtype": "Check",
+   "label": "billed service",
+   "reqd": 1
+  },
+  {
+   "fieldname": "meetings",
+   "fieldtype": "Table",
+   "label": "Sessions & Appointments",
+   "options": "MeetingContent"
+  },
+  {
+   "fieldname": "case_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Case Type",
+   "options": "CaseType",
+   "reqd": 1
+  },
+  {
+   "fieldname": "case_topic",
+   "fieldtype": "Text",
+   "label": "Case Topic"
+  },
+  {
+   "fieldname": "case_degree",
+   "fieldtype": "Link",
+   "label": "Case Degree",
+   "options": "Case Degree"
+  },
+  {
+   "fieldname": "study_potential_cases",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Study Potential Cases",
+   "options": "Study Potential Cases"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "The Responsible Client",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "tasks",
+   "fieldtype": "Table",
+   "label": "Tasks",
+   "options": "CaseTask"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_12",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_23",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "lawyers_section",
+   "fieldtype": "Section Break",
+   "label": "Lawyers"
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Table",
+   "label": "Lawyer",
+   "options": "EmployeeTable"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "attachements",
+   "fieldtype": "Table",
+   "label": "Attachements",
+   "options": "LawAttachementTable"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "link_doctype": "Execution",
+   "link_fieldname": "execution_request_number"
+  },
+  {
+   "link_doctype": "Contract",
+   "link_fieldname": "party_name"
+  }
+ ],
+ "modified": "2023-08-25 14:53:19.146340",
+ "modified_by": "Administrator",
+ "module": "Lawyer",
+ "name": "Case",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

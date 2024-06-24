@@ -1,0 +1,156 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{meeting_title}-{####}",
+ "creation": "2022-02-13 14:15:07.854162",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "meeting_title",
+  "meeting_type",
+  "private",
+  "customer",
+  "potential_client",
+  "existing_customer",
+  "date",
+  "end_date",
+  "lawyer",
+  "lawyer_name",
+  "service_type",
+  "appointment_details",
+  "potential_service_id",
+  "employee"
+ ],
+ "fields": [
+  {
+   "fieldname": "date",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "lawyer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Lawyer",
+   "options": "Employee"
+  },
+  {
+   "depends_on": "eval:doc.private == false",
+   "fieldname": "service_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Service type",
+   "options": "Service Type"
+  },
+  {
+   "depends_on": "eval:doc.existing_customer == true && doc.private == false",
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Client Name",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "appointment_details",
+   "fieldtype": "Text",
+   "label": "Appointment details"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "End Date"
+  },
+  {
+   "fetch_from": "lawyer.employee_name",
+   "fieldname": "lawyer_name",
+   "fieldtype": "Data",
+   "label": "Lawyer Name"
+  },
+  {
+   "depends_on": "eval:doc.private == false",
+   "fieldname": "potential_service_id",
+   "fieldtype": "Link",
+   "label": "Potential Service ID",
+   "options": "PotentialService"
+  },
+  {
+   "depends_on": "eval:doc.existing_customer == false && doc.private == false",
+   "fieldname": "potential_client",
+   "fieldtype": "Link",
+   "label": "Potential Client ",
+   "options": "PotentialClient"
+  },
+  {
+   "default": "0",
+   "fieldname": "private",
+   "fieldtype": "Check",
+   "label": "Private"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.private == false",
+   "fieldname": "existing_customer",
+   "fieldtype": "Check",
+   "label": "Existing Customer"
+  },
+  {
+   "depends_on": "eval:doc.private == true",
+   "fieldname": "employee",
+   "fieldtype": "Table",
+   "label": "Employee",
+   "options": "EmployeeTable"
+  },
+  {
+   "fieldname": "meeting_title",
+   "fieldtype": "Data",
+   "label": "Meeting Title",
+   "reqd": 1
+  },
+  {
+   "default": "Offline",
+   "fieldname": "meeting_type",
+   "fieldtype": "Select",
+   "label": "Meeting Type",
+   "options": "Online\nOffline"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-08 10:41:10.081460",
+ "modified_by": "Administrator",
+ "module": "Lawyer",
+ "name": "Appointments",
+ "name_case": "Title Case",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

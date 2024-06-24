@@ -1,0 +1,84 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{executor}-{execution_request_number}-{####}",
+ "creation": "2022-02-23 13:45:11.725924",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "execution_request_number",
+  "executor",
+  "current_procedure",
+  "column_break_3",
+  "department_name",
+  "executed_to",
+  "date"
+ ],
+ "fields": [
+  {
+   "fieldname": "execution_request_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Execution Request Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "executor",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Executor",
+   "reqd": 1
+  },
+  {
+   "fieldname": "executed_to",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Executed to",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "department_name",
+   "fieldtype": "Data",
+   "label": "Department Name"
+  },
+  {
+   "fieldname": "current_procedure",
+   "fieldtype": "Text",
+   "label": "Current Procedure"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-05-12 14:41:32.054669",
+ "modified_by": "Administrator",
+ "module": "Lawyer",
+ "name": "Execution",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

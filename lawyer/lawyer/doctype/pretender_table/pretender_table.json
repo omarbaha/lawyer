@@ -1,0 +1,78 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-02-27 10:24:26.100164",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "pretender_name",
+  "pretender_type",
+  "email",
+  "mobile",
+  "city",
+  "nationality"
+ ],
+ "fields": [
+  {
+   "fieldname": "pretender_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Pretender Name",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "pretender_name.city",
+   "fieldname": "city",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "City",
+   "options": "City",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "pretender_name.nationality",
+   "fieldname": "nationality",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nationality",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "pretender_name.email_id",
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Email",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "pretender_name.mobile_no",
+   "fieldname": "mobile",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Mobile",
+   "read_only": 1
+  },
+  {
+   "fieldname": "pretender_type",
+   "fieldtype": "Link",
+   "label": "Pretender Type",
+   "options": "Customer Group"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-01-14 17:14:53.901453",
+ "modified_by": "Administrator",
+ "module": "Lawyer",
+ "name": "Pretender Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

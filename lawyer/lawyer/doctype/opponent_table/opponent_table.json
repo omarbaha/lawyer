@@ -1,0 +1,70 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-02-27 10:15:09.841016",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "opponent_type",
+  "opponent_name",
+  "mobile_no",
+  "city",
+  "nationality",
+  "age"
+ ],
+ "fields": [
+  {
+   "fieldname": "opponent_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Opponent Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "mobile_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Mobile No"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "City",
+   "options": "City"
+  },
+  {
+   "fieldname": "nationality",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nationality"
+  },
+  {
+   "depends_on": "eval: doc.opponent_type === \"\u0641\u0631\u062f\"",
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Age"
+  },
+  {
+   "fieldname": "opponent_type",
+   "fieldtype": "Link",
+   "label": "Opponent Type",
+   "options": "Customer Group"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-01-14 17:14:36.882488",
+ "modified_by": "Administrator",
+ "module": "Lawyer",
+ "name": "Opponent Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

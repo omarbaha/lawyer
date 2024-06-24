@@ -1,0 +1,113 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:agent",
+ "creation": "2023-05-02 11:17:08.150777",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "agent",
+  "client",
+  "agency_number",
+  "column_break_a1caj",
+  "company",
+  "issuing_date",
+  "expiry_date",
+  "notification_dates_section",
+  "notif_date1",
+  "notif_date2",
+  "notif_date3"
+ ],
+ "fields": [
+  {
+   "fieldname": "agent",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Agent",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Client",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "agency_number",
+   "fieldtype": "Data",
+   "label": "Agency Number"
+  },
+  {
+   "fieldname": "issuing_date",
+   "fieldtype": "Date",
+   "label": "Issuing Date"
+  },
+  {
+   "fieldname": "expiry_date",
+   "fieldtype": "Date",
+   "label": "Expiry Date"
+  },
+  {
+   "fieldname": "column_break_a1caj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "notif_date1",
+   "fieldtype": "Date",
+   "label": "Notif Date1"
+  },
+  {
+   "fieldname": "notif_date2",
+   "fieldtype": "Date",
+   "label": "Notif Date2"
+  },
+  {
+   "fieldname": "notif_date3",
+   "fieldtype": "Date",
+   "label": "Notif Date3"
+  },
+  {
+   "fieldname": "notification_dates_section",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Notification Dates"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-11-26 13:52:52.570197",
+ "modified_by": "Administrator",
+ "module": "Lawyer",
+ "name": "Agency",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

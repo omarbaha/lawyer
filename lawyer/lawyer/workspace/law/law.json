@@ -1,0 +1,185 @@
+{
+ "category": "Modules",
+ "charts": [],
+ "creation": "2022-05-16 11:33:19.498696",
+ "developer_mode_only": 0,
+ "disable_user_customization": 0,
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "extends_another_page": 0,
+ "hide_custom": 0,
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "label": "Law",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Legal services",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Study Potential Cases",
+   "link_to": "Study Potential Cases",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Case",
+   "link_to": "Case",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Execution",
+   "link_to": "Execution",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Consulting",
+   "link_to": "Consulting",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Miscellaneous Services",
+   "link_to": "Miscellaneous Services",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Services and appointments",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Potential Service",
+   "link_to": "PotentialService",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Meeting dates",
+   "link_to": "General Appointment",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Law Library",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Contract Template",
+   "link_to": "ContractTemplate",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Law Research",
+   "link_to": "LawResearch",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Regulation",
+   "link_to": "Regulation",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Law Precedents",
+   "link_to": "LawPrecedents",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Jurisprudence Rules",
+   "link_to": "Jurisprudence Rules",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2022-05-23 14:25:34.886028",
+ "modified_by": "Administrator",
+ "module": "Lawyer",
+ "name": "Law",
+ "owner": "Administrator",
+ "pin_to_bottom": 0,
+ "pin_to_top": 1,
+ "shortcuts": [
+  {
+   "color": "#EC864B",
+   "doc_view": "",
+   "format": "{} Pending",
+   "label": "PotentialService",
+   "link_to": "PotentialService",
+   "stats_filter": "{\n    \"workflow_state\":\"Pending\"\n}",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "",
+   "label": "Case",
+   "link_to": "Case",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "",
+   "label": "Meeting dates",
+   "link_to": "General Appointment",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "",
+   "label": "Consulting",
+   "link_to": "Consulting",
+   "type": "DocType"
+  }
+ ]
+}

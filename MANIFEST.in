@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include lawyer *.css
+recursive-include lawyer *.csv
+recursive-include lawyer *.html
+recursive-include lawyer *.ico
+recursive-include lawyer *.js
+recursive-include lawyer *.json
+recursive-include lawyer *.md
+recursive-include lawyer *.png
+recursive-include lawyer *.py
+recursive-include lawyer *.svg
+recursive-include lawyer *.txt
+recursive-exclude lawyer *.pyc

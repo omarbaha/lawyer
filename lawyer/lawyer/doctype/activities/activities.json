@@ -1,0 +1,74 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{activity_name}-{####}",
+ "creation": "2022-02-28 14:20:49.984594",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "the_responsible_employee",
+  "activity_name",
+  "activity_date",
+  "activity_period",
+  "activity_list",
+  "activity_purpose"
+ ],
+ "fields": [
+  {
+   "fieldname": "activity_name",
+   "fieldtype": "Data",
+   "label": "Activity Name"
+  },
+  {
+   "fieldname": "activity_date",
+   "fieldtype": "Datetime",
+   "label": "Activity Date"
+  },
+  {
+   "fieldname": "activity_period",
+   "fieldtype": "Datetime",
+   "label": " Activity Period"
+  },
+  {
+   "fieldname": "activity_list",
+   "fieldtype": "Text",
+   "label": " Activity List"
+  },
+  {
+   "fieldname": "activity_purpose",
+   "fieldtype": "Text",
+   "label": "Activity Purpose"
+  },
+  {
+   "fieldname": "the_responsible_employee",
+   "fieldtype": "Link",
+   "label": "The Responsible employee",
+   "options": "Employee"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-03-02 12:51:56.113571",
+ "modified_by": "Administrator",
+ "module": "Lawyer",
+ "name": "Activities",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

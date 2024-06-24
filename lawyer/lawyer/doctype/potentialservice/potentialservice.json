@@ -1,0 +1,123 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{service_type}-{####}",
+ "creation": "2022-03-09 14:48:28.351532",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "client_info_section",
+  "potential_client",
+  "client",
+  "existing_client",
+  "details_section",
+  "service_type",
+  "service_description",
+  "amended_from",
+  "status"
+ ],
+ "fields": [
+  {
+   "depends_on": "eval:doc.existing_client == false",
+   "fieldname": "potential_client",
+   "fieldtype": "Link",
+   "label": "Potential Client",
+   "options": "PotentialClient"
+  },
+  {
+   "default": "0",
+   "fieldname": "existing_client",
+   "fieldtype": "Check",
+   "label": "Existing Client"
+  },
+  {
+   "fieldname": "service_type",
+   "fieldtype": "Link",
+   "label": "Service Type",
+   "options": "Service Type"
+  },
+  {
+   "fieldname": "service_description",
+   "fieldtype": "Text",
+   "label": "Service Description"
+  },
+  {
+   "depends_on": "eval:doc.existing_client == true",
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "label": "Client",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "PotentialService",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Status"
+  },
+  {
+   "fieldname": "client_info_section",
+   "fieldtype": "Section Break",
+   "label": "Client Info"
+  },
+  {
+   "fieldname": "details_section",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "General Appointment",
+   "link_fieldname": "potential_service_id"
+  },
+  {
+   "link_doctype": "Quotation",
+   "link_fieldname": "customer_name"
+  }
+ ],
+ "modified": "2024-01-08 10:41:09.873125",
+ "modified_by": "Administrator",
+ "module": "Lawyer",
+ "name": "PotentialService",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

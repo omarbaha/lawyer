@@ -1,0 +1,115 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{client}-{####}",
+ "creation": "2022-02-23 13:38:52.220219",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "client",
+  "topic_summry",
+  "column_break_6",
+  "date",
+  "client_requests",
+  "lawyer_section",
+  "employee",
+  "section_break_8",
+  "law_opinion",
+  "consulting_cost"
+ ],
+ "fields": [
+  {
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Client",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "topic_summry",
+   "fieldtype": "Text",
+   "label": "Topic Summry"
+  },
+  {
+   "fieldname": "client_requests",
+   "fieldtype": "Text",
+   "label": "Client Requests"
+  },
+  {
+   "fieldname": "law_opinion",
+   "fieldtype": "Text",
+   "label": "Law Opinion"
+  },
+  {
+   "fieldname": "consulting_cost",
+   "fieldtype": "Currency",
+   "label": "Consulting Cost"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "lawyer_section",
+   "fieldtype": "Section Break",
+   "label": "Lawyers"
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Table",
+   "label": "Employee",
+   "options": "EmployeeTable"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "group": "Cases",
+   "link_doctype": "Case",
+   "link_fieldname": "equivalent_number"
+  }
+ ],
+ "modified": "2023-08-16 15:59:22.299696",
+ "modified_by": "Administrator",
+ "module": "Lawyer",
+ "name": "Consulting",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

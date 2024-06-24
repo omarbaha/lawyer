@@ -1,0 +1,62 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{class_name}-{primary_class}",
+ "creation": "2024-01-08 10:25:01.543982",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "primary_class",
+  "class_name",
+  "reqs"
+ ],
+ "fields": [
+  {
+   "fieldname": "primary_class",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Primary Class",
+   "options": "Service Class",
+   "reqd": 1
+  },
+  {
+   "fieldname": "class_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Class Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "reqs",
+   "fieldtype": "Long Text",
+   "label": "Requirements"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-08 13:06:58.701803",
+ "modified_by": "Administrator",
+ "module": "Lawyer",
+ "name": "Service Subclass",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

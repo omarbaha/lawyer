@@ -1,0 +1,195 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-07-09 14:04:54.496028",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "langauge",
+  "full_name",
+  "id_number",
+  "email",
+  "phone_number",
+  "password",
+  "company",
+  "abbr",
+  "office_address",
+  "state",
+  "country",
+  "city",
+  "district",
+  "street_name",
+  "pincode",
+  "building_no",
+  "cr",
+  "tax_id_number",
+  "existing_tax_number",
+  "tax_category",
+  "advertiser",
+  "logo"
+ ],
+ "fields": [
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Full Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "id_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "ID",
+   "reqd": 1
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Email",
+   "reqd": 1
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Phone Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "password",
+   "fieldtype": "Data",
+   "label": "Password"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Data",
+   "label": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "office_address",
+   "fieldtype": "Heading",
+   "label": "Office Address"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Link",
+   "label": "City",
+   "options": "City",
+   "reqd": 1
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Data",
+   "label": "Country",
+   "reqd": 1
+  },
+  {
+   "fieldname": "pincode",
+   "fieldtype": "Data",
+   "label": "Pincode",
+   "reqd": 1
+  },
+  {
+   "fieldname": "building_no",
+   "fieldtype": "Data",
+   "label": "Building No",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cr",
+   "fieldtype": "Data",
+   "label": "CR",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tax_id_number",
+   "fieldtype": "Data",
+   "label": "Tax (ID) Number"
+  },
+  {
+   "default": "0",
+   "fieldname": "existing_tax_number",
+   "fieldtype": "Check",
+   "label": "Existing Tax Number"
+  },
+  {
+   "fieldname": "tax_category",
+   "fieldtype": "Data",
+   "label": "Tax Category"
+  },
+  {
+   "default": "WOW",
+   "fieldname": "advertiser",
+   "fieldtype": "Data",
+   "label": "Advertiser",
+   "read_only": 1
+  },
+  {
+   "fieldname": "street_name",
+   "fieldtype": "Data",
+   "label": "Street Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "district",
+   "fieldtype": "Data",
+   "label": "District",
+   "reqd": 1
+  },
+  {
+   "fieldname": "logo",
+   "fieldtype": "Attach",
+   "label": "Logo"
+  },
+  {
+   "fieldname": "langauge",
+   "fieldtype": "Link",
+   "label": "Langauge",
+   "options": "Language"
+  },
+  {
+   "fieldname": "abbr",
+   "fieldtype": "Data",
+   "label": "Company Abbr",
+   "length": 6,
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Link",
+   "label": "State/Province",
+   "options": "Region"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-02-07 10:09:32.036974",
+ "modified_by": "Administrator",
+ "module": "Lawyer",
+ "name": "Register",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "translated_doctype": 1
+}

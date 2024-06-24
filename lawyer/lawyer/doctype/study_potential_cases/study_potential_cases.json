@@ -1,0 +1,205 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{the_responsible_client}-{case_type}-{####}",
+ "creation": "2022-02-23 12:22:21.789337",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "client_details_section",
+  "customer",
+  "client_requests",
+  "topic_summary",
+  "the_parties",
+  "pretender",
+  "column_break_4",
+  "respondent",
+  "lawyer_section",
+  "employee",
+  "details_section",
+  "date",
+  "case_type",
+  "law_opinion",
+  "client_position",
+  "attachements",
+  "amended_from",
+  "notes",
+  "case_cost"
+ ],
+ "fields": [
+  {
+   "fieldname": "the_parties",
+   "fieldtype": "Section Break",
+   "label": "the parties"
+  },
+  {
+   "fieldname": "case_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Case Type",
+   "options": "CaseType",
+   "reqd": 1
+  },
+  {
+   "fieldname": "client_requests",
+   "fieldtype": "Data",
+   "label": "Client Requests"
+  },
+  {
+   "fieldname": "topic_summary",
+   "fieldtype": "Text",
+   "label": "Topic Summary"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "law_opinion",
+   "fieldtype": "Text",
+   "label": "Law opinion"
+  },
+  {
+   "fieldname": "client_position",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Client Position",
+   "options": "ClientPosition",
+   "reqd": 1
+  },
+  {
+   "fieldname": "case_cost",
+   "fieldtype": "Currency",
+   "label": "Case Cost"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "pretender",
+   "fieldtype": "Table",
+   "label": "Pretender",
+   "options": "Pretender Table",
+   "reqd": 1
+  },
+  {
+   "fieldname": "respondent",
+   "fieldtype": "Table",
+   "label": "Opponent",
+   "options": "Opponent Table",
+   "reqd": 1
+  },
+  {
+   "fieldname": "attachements",
+   "fieldtype": "Table",
+   "label": "Attachements",
+   "options": "LawAttachementTable"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "The Responsible Client",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Study Potential Cases",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "client_details_section",
+   "fieldtype": "Section Break",
+   "label": "Client Details"
+  },
+  {
+   "fieldname": "details_section",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Table",
+   "label": "Employee",
+   "options": "EmployeeTable"
+  },
+  {
+   "fieldname": "lawyer_section",
+   "fieldtype": "Section Break",
+   "label": "Lawyers"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "group": "Cases",
+   "link_doctype": "Case",
+   "link_fieldname": "equivalent_number"
+  },
+  {
+   "link_doctype": "Quotation",
+   "link_fieldname": "customer_name"
+  },
+  {
+   "group": "Contract",
+   "link_doctype": "Contract",
+   "link_fieldname": "party_name"
+  }
+ ],
+ "modified": "2023-08-25 14:51:43.623345",
+ "modified_by": "Administrator",
+ "module": "Lawyer",
+ "name": "Study Potential Cases",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

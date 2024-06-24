@@ -1,0 +1,254 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{meeting_title}-{####}",
+ "creation": "2022-03-10 10:16:28.940480",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "project",
+  "appointment_details_section",
+  "meeting_title",
+  "meeting_room",
+  "column_break_3",
+  "meeting_type",
+  "private",
+  "client_info_section",
+  "customer",
+  "potential_client",
+  "existing_customer",
+  "lawyers_section",
+  "column_break_12",
+  "employee",
+  "dates_section",
+  "date",
+  "column_break_16",
+  "end_date",
+  "details_section",
+  "service_type",
+  "appointment_details",
+  "potential_service_id",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "meeting_title",
+   "fieldtype": "Data",
+   "label": "Meeting Title",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "private",
+   "fieldtype": "Check",
+   "label": "Private"
+  },
+  {
+   "depends_on": "eval:doc.existing_customer == true && doc.private == false",
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Client Name",
+   "options": "Customer"
+  },
+  {
+   "depends_on": "eval:doc.existing_customer == false && doc.private == false",
+   "fieldname": "potential_client",
+   "fieldtype": "Link",
+   "label": "\u0639\u0645\u064a\u0644 \u0645\u062d\u062a\u0645\u0644",
+   "options": "PotentialClient"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.private == false",
+   "fieldname": "existing_customer",
+   "fieldtype": "Check",
+   "label": "Existing Customer"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "End Date"
+  },
+  {
+   "depends_on": "eval:doc.private == false",
+   "fieldname": "service_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Service type",
+   "options": "Service Type"
+  },
+  {
+   "fieldname": "appointment_details",
+   "fieldtype": "Text",
+   "label": "Appointment details"
+  },
+  {
+   "depends_on": "eval:doc.private == false",
+   "fieldname": "potential_service_id",
+   "fieldtype": "Link",
+   "label": "Potential Service ID",
+   "options": "PotentialService"
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Table",
+   "label": "Employee",
+   "options": "EmployeeTable"
+  },
+  {
+   "default": "Offline",
+   "fieldname": "meeting_type",
+   "fieldtype": "Select",
+   "label": "Meeting Type",
+   "options": "Online\nOffline"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "General Appointment",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "appointment_details_section",
+   "fieldtype": "Section Break",
+   "label": "Appointment Details"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "client_info_section",
+   "fieldtype": "Section Break",
+   "label": "Client Info"
+  },
+  {
+   "fieldname": "lawyers_section",
+   "fieldtype": "Section Break",
+   "label": "Lawyers"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "dates_section",
+   "fieldtype": "Section Break",
+   "label": "Dates"
+  },
+  {
+   "fieldname": "column_break_16",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "details_section",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "meeting_room",
+   "fieldtype": "Link",
+   "label": "Meeting Room",
+   "options": "Meeting Room"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Project"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Contract",
+   "link_fieldname": "party_name"
+  },
+  {
+   "link_doctype": "Study Potential Cases",
+   "link_fieldname": "customer"
+  },
+  {
+   "link_doctype": "Consulting",
+   "link_fieldname": "client"
+  },
+  {
+   "link_doctype": "Miscellaneous Services",
+   "link_fieldname": "client"
+  }
+ ],
+ "modified": "2024-01-17 15:04:26.141419",
+ "modified_by": "Administrator",
+ "module": "Lawyer",
+ "name": "General Appointment",
+ "name_case": "Title Case",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "permlevel": 2,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

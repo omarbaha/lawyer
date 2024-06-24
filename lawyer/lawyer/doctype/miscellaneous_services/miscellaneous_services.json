@@ -1,0 +1,139 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{client}-{service_name}-{####}",
+ "creation": "2022-02-13 13:45:12.297608",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "client",
+  "service_description",
+  "column_break_4",
+  "service_name",
+  "file_name",
+  "archive_number",
+  "start_service",
+  "end_of_service",
+  "service_suspension",
+  "billed_service",
+  "lawyers_section",
+  "employee",
+  "section_break_13",
+  "attachements"
+ ],
+ "fields": [
+  {
+   "fieldname": "file_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "File name"
+  },
+  {
+   "fieldname": "archive_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "archive number"
+  },
+  {
+   "fieldname": "start_service",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "start service",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_of_service",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "End of service"
+  },
+  {
+   "fieldname": "service_suspension",
+   "fieldtype": "Date",
+   "label": "service suspension"
+  },
+  {
+   "fieldname": "service_description",
+   "fieldtype": "Text",
+   "label": "Service description"
+  },
+  {
+   "default": "0",
+   "fieldname": "billed_service",
+   "fieldtype": "Check",
+   "label": "billed service",
+   "reqd": 1
+  },
+  {
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "label": "Client",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "service_name",
+   "fieldtype": "Data",
+   "label": "Service name"
+  },
+  {
+   "fieldname": "attachements",
+   "fieldtype": "Table",
+   "label": "Attachements",
+   "options": "LawAttachementTable"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_13",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "lawyers_section",
+   "fieldtype": "Section Break",
+   "label": "Lawyers"
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Table",
+   "label": "Employee",
+   "options": "EmployeeTable"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-08-16 15:58:07.334505",
+ "modified_by": "Administrator",
+ "module": "Lawyer",
+ "name": "Miscellaneous Services",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
